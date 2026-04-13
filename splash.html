@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1080,initial-scale=1"/>
+<title>WebGram Splash</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    width:1080px;height:1920px;
+    overflow:hidden;
+    background:linear-gradient(175deg,#f0069a 0%,#c41aee 28%,#7a12f5 58%,#3b0ac8 80%,#1a0492 100%);
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    gap:0;
+    font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;
+  }
+  .plane-wrap{
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:80px;
+  }
+  svg.plane{
+    width:620px;height:620px;
+    filter:drop-shadow(0 0 80px rgba(255,255,255,0.40)) drop-shadow(0 24px 70px rgba(0,0,0,0.32));
+  }
+  .wordmark{
+    color:#fff;
+    font-size:112px;
+    font-weight:900;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    font-family:'Google Sans','Product Sans','Helvetica Neue',Arial,sans-serif;
+    text-shadow:0 4px 48px rgba(255,255,255,0.25);
+    white-space:nowrap;
+  }
+</style>
+</head>
+<body>
+  <div class="plane-wrap">
+    <!-- Telegram-style paper plane matching the reference branding -->
+    <svg class="plane" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Shadow layer for depth -->
+      <path
+        d="M 18 105 L 168 28 L 115 158 L 82 128 Z"
+        fill="rgba(0,0,0,0.18)"
+        transform="translate(4,8)"
+      />
+      <!-- Main wing body -->
+      <path
+        d="M 18 105 L 168 28 L 115 158 L 82 128 Z"
+        fill="white"
+      />
+      <!-- Inner crease / fold line (darker white to show depth) -->
+      <path
+        d="M 82 128 L 168 28"
+        stroke="rgba(180,120,220,0.55)"
+        stroke-width="2"
+      />
+      <!-- Lower tail fold — the 'V' notch at the bottom -->
+      <path
+        d="M 82 128 L 92 158 L 115 158 Z"
+        fill="rgba(255,255,255,0.72)"
+      />
+    </svg>
+  </div>
+  <div class="wordmark">WEB GRAM</div>
+</body>
+</html>
