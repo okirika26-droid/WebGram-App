@@ -1,8 +1,4 @@
-{
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-"esModuleInterop": true
-
+"compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -15,11 +11,6 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "paths": {
-  "@/*": ["src/*"]
-}
-
+      "@/*": ["src/*"]
     }
-  },
-  "include": ["src"]
-}
+},
