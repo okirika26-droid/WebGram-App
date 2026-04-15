@@ -41,7 +41,9 @@ function AppRoutes() {
       setOnboardingChecked(true);
       return;
     }
-    getUserProfile(user.uid).then((profile) => {
+    
+    // التعديل هنا باش الـ TypeScript ما يبقاش يوقف الـ Build
+    getUserProfile(user.uid).then((profile: any) => {
       const done = (profile as Record<string, unknown> | null)?.onboardingDone as boolean | undefined;
       if (!done) {
         navigate("/edit-profile");
@@ -52,8 +54,8 @@ function AppRoutes() {
 
   if (loading || (user && !onboardingChecked && location !== "/edit-profile")) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-        <div className="w-8 h-8 rounded-full border-4 border-purple-200 border-t-purple-500 animate-spin" />
+      <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
+        <div className="w-8 h-8 rounded-full border-4 border-primary/20 border-t-primary animate-spin" />
       </div>
     );
   }
@@ -73,7 +75,7 @@ function AppRoutes() {
   return (
     <CallProvider>
       <NotificationManager />
-      <div className="min-h-screen bg-gray-50 dark:bg-black">
+      <div className="min-h-screen bg-background text-foreground">
         <Navbar navigate={navigate} />
         <ErrorBoundary>
           <Switch>
@@ -114,4 +116,3 @@ function App() {
 }
 
 export default App;
-
